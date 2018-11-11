@@ -24,9 +24,9 @@ export class ElementRefComponent implements AfterViewInit {
          * this.elementRef.nativeElement是当前组件的顶部元素
          */
         console.log(this.elementRef.nativeElement);
-        const divElement = this.elementRef.nativeElement.querySelector('div');
+        const divElement: HTMLElement = this.elementRef.nativeElement.querySelector('div');
         // console.log(divElement);
-        this.buttonOne.nativeElement.style.backgroundColor = 'red';
+        this.buttonOne.nativeElement.style.backgroundColor = 'blue';
     }
 
 }
