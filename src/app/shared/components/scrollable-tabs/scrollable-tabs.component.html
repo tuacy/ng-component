@@ -1,0 +1,13 @@
+<section class="tabs-container">
+  <!-- 前一个 -->
+  <span class="change-btn prev" (click)="scrollTab(-1)" [class.hide]="atStart">&lsaquo;</span>
+
+  <ul class="tabs" [ngStyle]="{'transform': translateX }">
+    <ng-container *ngFor="let tab of tabs; let i=index">
+      <li class="tab" [class.active]="selectedIndex===i" (click)="selectTab(i)">{{tab}}</li>
+    </ng-container>
+  </ul>
+
+  <!-- 后一个 -->
+  <span class="change-btn next" [class.hide]="atEnd" (click)="scrollTab(1)">&rsaquo;</span>
+</section>
